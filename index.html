@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/st_reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="main__content worker-form">
+                <p class="title">Форма создания / редактирования сотрудника</p>
+                <form class="worker-form__form">
+                    <label for="name">Фамилия Имя</label>
+                    <input type="text" class="worker-form__input" id="name" name="name" aria-describedby="tooltip">
+                    <div id="tooltip" role="tooltip">Введите фамилию и имя</div>
+
+                    <label for="position">Должность</label>
+                    <input type="text" class="worker-form__input" id="position" name="position" aria-describedby="tooltip">
+                    <div id="tooltip" role="tooltip">Введите должность (min 5 букв)</div>
+
+                    <label for="email">Email</label>
+                    <input type="text" class="worker-form__input" id="email" name="email" aria-describedby="tooltip">
+                    <div id="tooltip" role="tooltip">Введите Email</div>
+
+                    <label for="phone">Телефон</label>
+                    <input type="text" class="worker-form__input" id="phone" name="phone" aria-describedby="tooltip">
+                    <div id="tooltip" role="tooltip">Введите номер телефона (+380../ 80.../ 0...)</div>
+
+                    <button type="submit" value="Save" class="worker-form__input submit-button">Сохранить</button>
+                </form>
+            </div>
+
+            <div class="main__content worker-list" id="workerslist">
+                <p class="title">Список сотрудников</p>
+
+                <ul class="worker-list__container">
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="text/template" id="worker-list">
+        <ul class="worker-list__list">
+            <li class="worker-list__list__item item-name">
+                <%-data.name%>
+            </li>
+            <li class="worker-list__list__item">
+                <%-data.position%>
+            </li>
+            <li class="worker-list__list__item">Email:
+                <%-data.email%> | Телефон:
+                    <%-data.phone%>
+            </li>
+            <div class="worker-list__buttons">
+                <button class="button edit-button" id="<%-data.id%>"></button>
+                <button class="button delete-button" id="<%-data.id%>"></button>
+            </div>
+        </ul>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <script src="dist/build.js"></script>
+</body>
+
+</html>

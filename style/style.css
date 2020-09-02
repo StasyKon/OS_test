@@ -1,0 +1,127 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.worker-form {
+    max-width: 350px;
+}
+
+.worker-list {
+    min-width: 400px;
+    max-width: 600px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.1;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.worker-list .title {
+    line-height: 2.2;
+}
+
+.worker-form__form,
+.worker-list__container {
+    background-color: rgb(226, 226, 226);
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.worker-list__container {
+    padding: 20px 10px 5px 10px;
+}
+
+.worker-form__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.worker-form__form label {
+    font-weight: bold;
+}
+
+.worker-form__input {
+    font-size: 16px;
+    line-height: 30px;
+    padding: 5px 10px;
+    margin: 5px 0 10px 0;
+    border: none;
+    border-radius: 3px;
+}
+
+.submit-button {
+    background-color: rgb(68, 183, 88);
+    margin: 5px 5px 10px 5px;
+}
+
+.submit-button:hover {
+    box-shadow: 0px 0px 5px 5px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.worker-list__list {
+    background-color: rgb(189, 189, 189);
+    padding: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.worker-list__list__item {
+    padding: 5px 0;
+}
+
+.worker-list__list__item:first-child {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.worker-list__buttons {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.button {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.button:hover {
+    box-shadow: 0px 0px 3px 3px rgb(255, 255, 255);
+}
+
+.edit-button {
+    background-color: rgb(135, 155, 255);
+}
+
+.delete-button {
+    background-color: rgb(255, 63, 64);
+}
+
+#tooltip {
+    background-color: rgb(247, 63, 47, 0.5);
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 13px;
+    display: none;
+}
